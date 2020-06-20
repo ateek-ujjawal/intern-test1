@@ -1,0 +1,22 @@
+.mat-row {
+  height: auto;
+}
+
+table {
+	width: 100%;
+}
+
+.overflow-container {
+	height: 90%;
+	width: 75%;
+	overflow: auto;
+	padding: 10px;
+}
+
+.mat-cell {
+  padding: 16px 16px 16px 0;
+}
+.mat-header-cell {
+  padding: 16px 16px 16px 0;
+}
+
