@@ -1,13 +1,21 @@
 <input type="file" (change)="onFileChange($event)" />
 
 
-<div class="overflow-container mx-auto" *ngIf="dataSource != null">
+<div *ngIf="dataSource != null">
 
-  <mat-form-field>
-    <mat-label>Filter</mat-label>
-    <input matInput (keyup)="applyFilter($event)" placeholder="Ex. ium">
-  </mat-form-field>
-
+  <div class="container">
+    <div class="row">
+      <div class="col-sm">
+        <mat-form-field>
+          <mat-label>Filter</mat-label>
+          <input matInput (keyup)="applyFilter($event)" placeholder="Ex. ium">
+        </mat-form-field>
+      </div>
+      <div class="col-sm">
+        <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+      </div>
+    </div>
+  </div>
   <br>
   <br>
   <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
@@ -90,5 +98,4 @@
       <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
     </table>
 
-    <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
 </div>

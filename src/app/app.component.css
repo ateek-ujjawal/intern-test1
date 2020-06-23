@@ -16,7 +16,12 @@ table {
 .mat-cell {
   padding: 16px 16px 16px 0;
 }
+
 .mat-header-cell {
   padding: 16px 16px 16px 0;
+  color: white;
 }
 
+tr.mat-header-row {
+	background-color: black;
+}
