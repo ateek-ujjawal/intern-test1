@@ -8,9 +8,17 @@ table {
 
 .overflow-container {
 	height: 90%;
-	width: 75%;
+	width: 85%;
 	overflow: auto;
 	padding: 10px;
+}
+
+.mat-form-field {
+	width: 100%;
+}
+
+.paginator-container {
+	width: 92%;
 }
 
 .mat-cell {
@@ -24,4 +32,8 @@ table {
 
 tr.mat-header-row {
 	background-color: black;
+}
+
+mat-checkbox {
+  margin: 1rem;
 }
