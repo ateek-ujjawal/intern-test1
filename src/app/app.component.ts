@@ -73,21 +73,21 @@ export class AppComponent {
   cbValues;
 
   columnDefinitions = [
-    { def: 'LOOKUP_TYPE', label: 'LOOKUP_TYPE', hide: this.LOOKUP_TYPE.value},
-    { def: 'LOOKUP_CODE', label: 'LOOKUP_CODE', hide: this.LOOKUP_CODE.value},
-    { def: 'START_DATE', label: 'START_DATE', hide: this.START_DATE.value},
-    { def: 'ENABLED_FLAG', label: 'ENABLED_FLAG', hide: this.ENABLED_FLAG.value},
-    { def: 'DESCRIPTION', label: 'DESCRIPTION', hide: this.DESCRIPTION.value},
-    { def: 'COL1', label: 'COL1', hide: this.COL1.value},
-    { def: 'COL2', label: 'COL2', hide: this.COL2.value},
-    { def: 'COL3', label: 'COL3', hide: this.COL3.value},
-    { def: 'COL4', label: 'COL4', hide: this.COL4.value},
-    { def: 'COL5', label: 'COL5', hide: this.COL5.value},
-    { def: 'COL6', label: 'COL6', hide: this.COL6.value},
-    { def: 'COL7', label: 'COL7', hide: this.COL7.value},
-    { def: 'COL18', label: 'COL18', hide: this.COL18.value},
-    { def: 'COL19', label: 'COL19', hide: this.COL19.value},
-    { def: 'COL20', label: 'COL20', hide: this.COL20.value},
+    { def: 'LOOKUP_TYPE', label: 'LookupType', hide: this.LOOKUP_TYPE.value},
+    { def: 'LOOKUP_CODE', label: 'MonitorID', hide: this.LOOKUP_CODE.value},
+    { def: 'START_DATE', label: 'StartDate', hide: this.START_DATE.value},
+    { def: 'ENABLED_FLAG', label: 'EnabledFlag', hide: this.ENABLED_FLAG.value},
+    { def: 'DESCRIPTION', label: 'MailBody', hide: this.DESCRIPTION.value},
+    { def: 'COL1', label: 'Col1', hide: this.COL1.value},
+    { def: 'COL2', label: 'OrderBy', hide: this.COL2.value},
+    { def: 'COL3', label: 'MonitorType', hide: this.COL3.value},
+    { def: 'COL4', label: 'DateSelectType', hide: this.COL4.value},
+    { def: 'COL5', label: 'FromEmail', hide: this.COL5.value},
+    { def: 'COL6', label: 'ToEmail', hide: this.COL6.value},
+    { def: 'COL7', label: 'Col7', hide: this.COL7.value},
+    { def: 'COL18', label: 'Col18', hide: this.COL18.value},
+    { def: 'COL19', label: 'LastFoundDate', hide: this.COL19.value},
+    { def: 'COL20', label: 'LastRunDate', hide: this.COL20.value},
   ]
 
   @ViewChild(MatPaginator, {static: false})

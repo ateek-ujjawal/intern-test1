@@ -30,6 +30,7 @@ table {
 .mat-header-cell {
   padding: 16px 16px 16px 0;
   color: white;
+  text-align: center;
 }
 
 tr.mat-header-row {
