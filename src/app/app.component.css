@@ -25,12 +25,14 @@ table {
 
 .mat-cell {
   padding: 16px 16px 16px 0;
+  white-space: nowrap;
 }
 
 .mat-header-cell {
   padding: 16px 16px 16px 0;
   color: white;
   text-align: center;
+  white-space: nowrap;
 }
 
 tr.mat-header-row {
@@ -39,4 +41,20 @@ tr.mat-header-row {
 
 mat-checkbox {
   margin: 1rem;
+}
+
+.color-box {
+  float: left;
+  width: 20px;
+  height: 20px;
+  margin: 5px;
+  border: 1px solid rgba(0, 0, 0, .2);
+}
+
+.red {
+  background: red;
+}
+
+.green {
+  background: green;
 }
