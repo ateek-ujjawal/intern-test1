@@ -1,23 +1,47 @@
-<div *ngIf="dataSource != null">
+<div *ngIf="dataSource != null" class="container4">
 
-  <div class="container">
-    <mat-form-field>
-      <mat-label>Filter</mat-label>
-      <input matInput (keyup)="applyFilter($event)">
-    </mat-form-field>
-    <br>
-    <br>
-    <h1>
-      HIDE COLUMNS
-    </h1>
-    <form [formGroup]="form">
-      <mat-checkbox *ngFor="let cd of columnDefinitions"  [formControlName]="cd.def">{{cd.label}}</mat-checkbox>
-    </form>
-  </div>
+  <mat-card class="filter-card">
+    <mat-card-content>
+      <div>
+        <mat-form-field>
+          <mat-label>Filter</mat-label>
+          <input matInput (keyup)="applyFilter($event)">
+        </mat-form-field>
+      </div>
+    </mat-card-content>
+  </mat-card>
   <br>
+  <mat-card>
+    <div>
+      <h1>
+        HIDE COLUMNS
+      </h1>
+      <form [formGroup]="form">
+        <div class="row">
+          <div class="col-sm">
+            <div *ngFor="let cd of columnDefinitions; let i = index">
+              <div *ngIf="i < 8">
+                <mat-checkbox  [formControlName]="cd.def">{{cd.label}}
+                </mat-checkbox>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm">
+            <div *ngFor="let cd1 of columnDefinitions; let i1 = index">
+              <div *ngIf="i1 > 8">
+                <mat-checkbox  [formControlName]="cd1.def">{{cd1.label}}
+                </mat-checkbox>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </mat-card>
   <br>
-  <div class="overflow-container mx-auto">
-    <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+  <mat-card>
+    <div class="overflow-container mx-auto">
+      <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
         <ng-container matColumnDef="STATUS">
           <th mat-header-cell *matHeaderCellDef> <b>Status</b> </th>
           <td mat-cell *matCellDef="let element">
@@ -105,9 +129,7 @@
         <tr mat-row *matRowDef="let row; columns: getDisplayedColumns();"></tr>
       </table>
     </div>
-
-    <div class="paginator-container">
       <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
-    </div>
+  </mat-card>
 
 </div>

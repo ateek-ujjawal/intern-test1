@@ -2,25 +2,23 @@
   height: auto;
 }
 
-table {
+.overflow-container {
+	overflow: auto;
 	width: 100%;
+	height: 400px;
 }
 
-.overflow-container {
-	height: 700px;
-	width: 85%;
-	overflow: auto;
-	padding-left: 10px;
-	padding-right: 10px;
-	padding-bottom: 10px;
+table {
+	width: 100%;
+	height: 100%;
 }
 
 .mat-form-field {
 	width: 100%;
 }
 
-.paginator-container {
-	width: 92%;
+.container4 {
+	padding: 50px 300px 0px 300px;
 }
 
 .mat-cell {
@@ -45,8 +43,8 @@ mat-checkbox {
 
 .color-box {
   float: left;
-  width: 20px;
-  height: 20px;
+  width: 10px;
+  height: 10px;
   margin: 5px;
   border: 1px solid rgba(0, 0, 0, .2);
 }
