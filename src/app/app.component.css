@@ -43,8 +43,8 @@ mat-checkbox {
 
 .color-box {
   float: left;
-  width: 10px;
-  height: 10px;
+  width: 75px;
+  height: 15px;
   margin: 5px;
   border: 1px solid rgba(0, 0, 0, .2);
 }

@@ -38,8 +38,8 @@ export class AppComponent {
 
   form:FormGroup = new FormGroup({
     STATUS: new FormControl(false),
-    LOOKUP_TYPE: new FormControl(false),
-    LOOKUP_CODE: new FormControl(true),
+    LOOKUP_TYPE: new FormControl(true),
+    LOOKUP_CODE: new FormControl(false),
     START_DATE: new FormControl(false),
     ENABLED_FLAG: new FormControl(false),
     DESCRIPTION: new FormControl(true),
@@ -47,7 +47,7 @@ export class AppComponent {
     COL2: new FormControl(false),
     COL3: new FormControl(false),
     COL4: new FormControl(false),
-    COL5: new FormControl(false),
+    COL5: new FormControl(true),
     COL6: new FormControl(true),
     COL7: new FormControl(true),
     COL18: new FormControl(false),
@@ -85,7 +85,7 @@ export class AppComponent {
     { def: 'COL4', label: 'Date Select Type', hide: this.COL4.value},
     { def: 'COL5', label: 'From Email', hide: this.COL5.value},
     { def: 'COL6', label: 'To Email', hide: this.COL6.value},
-    { def: 'COL7', label: 'Col 7', hide: this.COL7.value},
+    { def: 'COL7', label: 'Description', hide: this.COL7.value},
     { def: 'COL18', label: 'Last Run Status', hide: this.COL18.value},
     { def: 'COL19', label: 'Last Found Date', hide: this.COL19.value},
     { def: 'COL20', label: 'Last Run Date', hide: this.COL20.value},
