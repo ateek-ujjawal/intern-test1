@@ -39,7 +39,7 @@ export class AppComponent {
   form:FormGroup = new FormGroup({
     STATUS: new FormControl(false),
     LOOKUP_TYPE: new FormControl(false),
-    LOOKUP_CODE: new FormControl(false),
+    LOOKUP_CODE: new FormControl(true),
     START_DATE: new FormControl(false),
     ENABLED_FLAG: new FormControl(false),
     DESCRIPTION: new FormControl(true),
@@ -74,9 +74,9 @@ export class AppComponent {
 
   columnDefinitions = [
     { def: 'STATUS', label: 'Status', hide: this.STATUS.value},
-    { def: 'LOOKUP_TYPE', label: 'Lookup Type', hide: this.ENABLED_FLAG.value},
-    { def: 'LOOKUP_CODE', label: 'Monitor ID', hide: this.ENABLED_FLAG.value},
-    { def: 'START_DATE', label: 'Start Date', hide: this.ENABLED_FLAG.value},
+    { def: 'LOOKUP_TYPE', label: 'Lookup Type', hide: this.LOOKUP_TYPE.value},
+    { def: 'LOOKUP_CODE', label: 'Monitor ID', hide: this.LOOKUP_CODE.value},
+    { def: 'START_DATE', label: 'Start Date', hide: this.START_DATE.value},
     { def: 'ENABLED_FLAG', label: 'Enabled Flag', hide: this.ENABLED_FLAG.value},
     { def: 'DESCRIPTION', label: 'Mail Body', hide: this.DESCRIPTION.value},
     { def: 'COL1', label: 'Interval(minutes)', hide: this.COL1.value},
