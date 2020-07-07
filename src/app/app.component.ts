@@ -96,6 +96,12 @@ export class AppComponent {
     this.dataSource.paginator = value;
   }
 
+  @ViewChild(MatSort, {static: true}) sort: MatSort;
+
+  ngOnInit() {
+    this.dataSource.sort = this.sort;
+  }
+
   getDisplayedColumns():string[] {
     return this.columnDefinitions.filter(cd=>!cd.hide).map(cd=>cd.def);
   }
